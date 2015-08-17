@@ -63,7 +63,7 @@ var getDeathDate = function(birthdate) {
 var renderView = function() {
   birthdateString = getBirthdateFromQueryString(location.search);
 
-  if (birthdateString) {
+  if (birthdateString && birthdateString.indexOf('?birthdate=') > -1) {
     // If we've got a birthdate, clear that interval shit.
     clearInterval(historyInterval);
 
