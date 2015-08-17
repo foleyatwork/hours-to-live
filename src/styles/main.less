@@ -1,0 +1,70 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #D0CBCC;
+  color: #181818;
+  font-family: 'Share Tech Mono', monospace;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 400;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+h1 { font-size: 35px; }
+h2 { font-size: 30px; }
+h1 { font-size: 25px; }
+h1 { font-size: 20px; }
+
+a {
+  color: #181818;
+  text-decoration: none;
+}
+
+.logo {
+  font-size: 18px;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+.wrapper {
+  left: 50%;
+  max-width: 650px;
+  min-width: 320px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+
+  @media (max-width: 320px) {
+    transform: translate(0, -50%);
+    left: 0;
+  }
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@import './modules/Signup.less';
+@import './modules/Countdown.less';
+@import './modules/Info.less';
