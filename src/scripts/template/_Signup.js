@@ -19,10 +19,6 @@ var _Signup = {
     var isValidBirthday;
     var isValidBirthdayInterval;
 
-    // Set the layout of the submit button.
-    submit.style.paddingTop = padding + 'px';
-    submit.style.paddingBottom = padding + 'px';
-
     isValidBirthday = false;
     isValidBirthdayInterval = setInterval(function() {
       isValidBirthday = !!birthday.value;
