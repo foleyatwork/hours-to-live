@@ -28,7 +28,11 @@ var ageTable;
  * @param {String} url
  */
 var getBirthdateFromQueryString = function(url) {
-  return url.replace(/.*?\?birthdate=/, '');
+  if (url.indexOf('?birthdate=') > -1) {
+    return url.replace(/.*?\?birthdate=/, '');
+  } else {
+    return '';
+  }
 };
 
 /**
@@ -61,9 +65,9 @@ var getDeathDate = function(birthdate) {
  * @private
  */
 var renderView = function() {
-  birthdateString = getBirthdateFromQueryString(location.href);
+  birthdateString = getBirthdateFromQueryString(location.search);
 
-  if (birthdateString && birthdateString.indexOf('?birthdate=') > -1) {
+  if (birthdateString) {
     // If we've got a birthdate, clear that interval shit.
     clearInterval(historyInterval);
 
