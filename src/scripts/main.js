@@ -89,3 +89,7 @@ var renderView = function() {
 // freeze the app into it's final state. If there
 // isn't, it will show the prompt for a birthdate.
 historyInterval = setInterval(renderView, 100);
+
+setTimeout(function() {
+  app.classList.remove('loading');
+}, 0);
